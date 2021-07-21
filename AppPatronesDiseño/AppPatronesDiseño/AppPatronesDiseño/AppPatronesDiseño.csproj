@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27D80354-65E9-4418-BF28-457AEC0D8095}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AppPatronesDiseño</RootNamespace>
+    <AssemblyName>AppPatronesDiseño</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\Dto\DtoPrincipio.cs" />
+    <Compile Include="Helpers\Dto\DtoRectangle.cs" />
+    <Compile Include="Helpers\Dto\DtoSquare.cs" />
+    <Compile Include="Helpers\Dto\DtoTriangle.cs" />
+    <Compile Include="Helpers\Dto\EnumPrincipios.cs" />
+    <Compile Include="Helpers\FormatosHelper.cs" />
+    <Compile Include="Helpers\ValidacionesHelper.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\Handler.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\ISmsRequest.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\Specification\ISpecification.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\Specification\MassiveSpecification.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\MassiveSuplier.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\Specification\SmallSpecification.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\SmallSuplier.cs" />
+    <Compile Include="Patrones comportamiento\01.ChainResponsability\SmsRequest.cs" />
+    <Compile Include="Patrones comportamiento\02.Command\Command.cs" />
+    <Compile Include="Patrones comportamiento\02.Command\EnumAction.cs" />
+    <Compile Include="Patrones comportamiento\02.Command\ICommand.cs" />
+    <Compile Include="Patrones comportamiento\02.Command\Processor.cs" />
+    <Compile Include="Patrones comportamiento\03.Interpreter\AdditionExpresion.cs" />
+    <Compile Include="Patrones comportamiento\03.Interpreter\IExpresion.cs" />
+    <Compile Include="Patrones comportamiento\03.Interpreter\FloatExpression.cs" />
+    <Compile Include="Patrones comportamiento\04.Iterator\AzureFaceCollection.cs" />
+    <Compile Include="Patrones comportamiento\04.Iterator\AzureFaceIterator.cs" />
+    <Compile Include="Patrones comportamiento\04.Iterator\Face.cs" />
+    <Compile Include="Patrones comportamiento\04.Iterator\IIterator.cs" />
+    <Compile Include="Patrones comportamiento\05.Memento\Account.cs" />
+    <Compile Include="Patrones comportamiento\05.Memento\IMementoAction.cs" />
+    <Compile Include="Patrones comportamiento\05.Memento\Memento.cs" />
+    <Compile Include="Patrones comportamiento\06.Mediator\Context.cs" />
+    <Compile Include="Patrones comportamiento\06.Mediator\IMediator.cs" />
+    <Compile Include="Patrones comportamiento\06.Mediator\Mediator.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\AdditionOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\DivisionOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\EnumMathOperations.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\IOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\MultiplicationOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\NullOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\Operations\SubtractionOperation.cs" />
+    <Compile Include="Patrones comportamiento\07.NullObject\RepositoryOperation.cs" />
+    <Compile Include="Patrones comportamiento\08.Observer\ServerObserver.cs" />
+    <Compile Include="Patrones comportamiento\08.Observer\Server.cs" />
+    <Compile Include="Patrones comportamiento\09.State\EnumState.cs" />
+    <Compile Include="Patrones comportamiento\09.State\ProcessState.cs" />
+    <Compile Include="Patrones comportamiento\10.Strategy\HtmlFormatter.cs" />
+    <Compile Include="Patrones comportamiento\10.Strategy\IFormatterStrategy.cs" />
+    <Compile Include="Patrones comportamiento\10.Strategy\TextProcess.cs" />
+    <Compile Include="Patrones comportamiento\10.Strategy\XmlFormatter.cs" />
+    <Compile Include="Patrones comportamiento\12.Visitor\IShapeVisitor.cs" />
+    <Compile Include="Patrones comportamiento\11.TemplateMethod\UTAdmin.cs" />
+    <Compile Include="Patrones comportamiento\11.TemplateMethod\UTManager.cs" />
+    <Compile Include="Patrones comportamiento\11.TemplateMethod\UserTemplate.cs" />
+    <Compile Include="Patrones comportamiento\12.Visitor\ShapeExpressionVisitor.cs" />
+    <Compile Include="Patrones comportamiento\12.Visitor\Shapes.cs" />
+    <Compile Include="Patrones creacionales\1.Builder\1.Builder\Request.cs" />
+    <Compile Include="Patrones creacionales\1.Builder\1.Builder\RequestAssembly.cs" />
+    <Compile Include="Patrones creacionales\1.Builder\1.Builder\RequestBuilder.cs" />
+    <Compile Include="Patrones creacionales\1.Builder\2.FluentBuilder\RequestBuilder.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\1.Factory\User.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\Factory\EnumUserType.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\Contract\User.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\UserAdmin.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\Factory\IUserFactory.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\UserFactory.cs" />
+    <Compile Include="Patrones creacionales\2.Factory\2.Abstract Factory\UserPro.cs" />
+    <Compile Include="Patrones creacionales\3.Prototype\DeepCopyHelper.cs" />
+    <Compile Include="Patrones creacionales\3.Prototype\UserICloneable.cs" />
+    <Compile Include="Patrones creacionales\3.Prototype\UserPrototype.cs" />
+    <Compile Include="Patrones creacionales\4.Singleton\LoggerSingleton.cs" />
+    <Compile Include="Patrones estructurales\1.Adapter\Detail.cs" />
+    <Compile Include="Patrones estructurales\1.Adapter\AdapterDetail.cs" />
+    <Compile Include="Patrones estructurales\1.Adapter\EnumTypeDetail.cs" />
+    <Compile Include="Patrones estructurales\1.Adapter\ITypeDetailConverter.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\BridgeFormatter.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\IFormatter.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\JsonClass.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\JsonFormatter.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\XmlClass.cs" />
+    <Compile Include="Patrones estructurales\2.Bridge\XmlFormatter.cs" />
+    <Compile Include="Patrones estructurales\3.Composite\AbstractUserC.cs" />
+    <Compile Include="Patrones estructurales\3.Composite\UserC.cs" />
+    <Compile Include="Patrones estructurales\3.Composite\UserCComposite.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\AdminRol.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\DecoratorAdministrative.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\DecoratorConfiguration.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\DecoratorFinancial.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\DecoratorTools.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\EnumRol.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\IRol.cs" />
+    <Compile Include="Patrones estructurales\4.Decorator\Rol.cs" />
+    <Compile Include="Patrones estructurales\5.Facade\FacadeReport.cs" />
+    <Compile Include="Patrones estructurales\5.Facade\ProcessReport.cs" />
+    <Compile Include="Patrones estructurales\6.FlyWeight\CounterTerrorist.cs" />
+    <Compile Include="Patrones estructurales\6.FlyWeight\EnumTypeCharacter.cs" />
+    <Compile Include="Patrones estructurales\6.FlyWeight\FactoryCharacter.cs" />
+    <Compile Include="Patrones estructurales\6.FlyWeight\ICharacter.cs" />
+    <Compile Include="Patrones estructurales\6.FlyWeight\Terrorist.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\Access.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\AccessProxy.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\EnumTypeRole.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\IUserAccess.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\IVerifyAccess.cs" />
+    <Compile Include="Patrones estructurales\7.Proxy\Manager.cs" />
+    <Compile Include="Principios\5.DIP.cs" />
+    <Compile Include="Principios\4.ISP.cs" />
+    <Compile Include="Principios\3.LSP.cs" />
+    <Compile Include="Principios\2.OCP.cs" />
+    <Compile Include="Principios\1.SRP.cs" />
+    <Compile Include="Principios\1.SRP_Ejemplo.cs" />
+    <Compile Include="Procesamiento\IShape.cs" />
+    <Compile Include="Procesamiento\IShapeArea.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
